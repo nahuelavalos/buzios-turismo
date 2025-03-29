@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzios Turismo - Agencia de Viajes en Buzios</title>
+    <meta name="description" content="Descubre la magia de Buzios con nuestra agencia de turismo especializada. Playas paradisíacas, cultura vibrante y experiencias inolvidables.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS personalizado (mínimo) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-umbrella-beach text-primary me-2"></i>
+                <span class="fw-bold" data-i18n="brand">Buzios Turismo</span>
+            </a>
+
+            <div class="d-flex ms-auto me-auto">
+                <div class="dropdown language-selector">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-globe"></i>
+                        <span class="d-none d-md-inline ms-1" data-i18n="language">Idioma</span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" data-lang="es"><img src="https://placehold.co/20x15" alt="Español" class="me-2 flag"> Español</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="pt"><img src="https://placehold.co/20x15" alt="Português" class="me-2 flag"> Português</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="en"><img src="https://placehold.co/20x15" alt="English" class="me-2 flag"> English</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destinations" data-i18n="nav.destinations">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" data-i18n="nav.services">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-i18n="nav.about">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials" data-i18n="nav.testimonials">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contacto</a>
+                    </li>
+                </ul>
+                
+            </div>
+            
+            
+
+            
+
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-white text-center">
+            <div class="container h-100 d-flex flex-column justify-content-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold mb-4" data-i18n="hero.title">Descubre la Magia de Buzios</h1>
+                        <p class="lead mb-5" data-i18n="hero.subtitle">Playas paradisíacas, cultura vibrante y experiencias inolvidables te esperan en el destino más encantador de Brasil.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="search-box bg-white rounded-4 shadow p-4 p-md-5 mt-n5 position-relative">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <label class="form-label"><i class="fas fa-map-marker-alt text-primary me-2"></i> <span data-i18n="search.destination">Destino</span></label>
+                            <input type="text" class="form-control" placeholder="Buzios, Brasil">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label"><i class="far fa-calendar-alt text-primary me-2"></i> <span data-i18n="search.dates">Fechas</span></label>
+                            <input type="text" class="form-control" placeholder="10 Jun - 20 Jun">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label"><i class="fas fa-users text-primary me-2"></i> <span data-i18n="search.travelers">Viajeros</span></label>
+                            <input type="text" class="form-control" placeholder="2 Adultos, 0 Niños">
+                        </div>
+                        <div class="col-md-3 d-flex align-items-end">
+                            <button class="btn btn-primary w-100"><i class="fas fa-search me-2"></i> <span data-i18n="search.button">Buscar</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Destinations -->
+        <section id="destinations" class="py-5 py-md-7">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold mb-3" data-i18n="destinations.title">Destinos Populares en Buzios</h2>
+                    <p class="text-muted mx-auto" style="max-width: 700px;" data-i18n="destinations.subtitle">Explora las playas más hermosas y los lugares más encantadores de Buzios</p>
+                </div>
+        
+                <div id="destinationsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+                    <div class="carousel-inner">
+                        <!-- Primera diapositiva -->
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card h-100">
+                                        <img src="img/fernandes.jpg" class="card-img-top" alt="Playa João Fernandes" style="height: 200px; object-fit: cover;">
+                                        <div class="card-body bg-light">
+                                            <h3 class="card-title h5 fw-bold">Playa João Fernandes</h3>
+                                            <p class="card-text text-muted">Aguas cristalinas y arena blanca, perfecta para snorkel.</p>
+                                            <button class="btn btn-outline-primary w-100 mt-3">Ver Detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card h-100">
+                                        <img src="img/geriba.jpg" class="card-img-top" alt="Playa Geribá" style="height: 200px; object-fit: cover;">
+                                        <div class="card-body bg-light">
+                                            <h3 class="card-title h5 fw-bold">Playa Geribá</h3>
+                                            <p class="card-text text-muted">La playa más famosa de Buzios, ideal para surfistas.</p>
+                                            <button class="btn btn-outline-primary w-100 mt-3">Ver Detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card h-100">
+                                        <img src="img/pedras.jpg" class="card-img-top" alt="Rua das Pedras" style="height: 200px; object-fit: cover;">
+                                        <div class="card-body bg-light">
+                                            <h3 class="card-title h5 fw-bold">Rua das Pedras</h3>
+                                            <p class="card-text text-muted">La calle principal con tiendas, restaurantes y vida nocturna.</p>
+                                            <button class="btn btn-outline-primary w-100 mt-3">Ver Detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Segunda diapositiva -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card h-100">
+                                        <img src="img/azeda.jpg" class="card-img-top" alt="Azeda y Azedinha" style="height: 200px; object-fit: cover;">
+                                        <div class="card-body bg-light">
+                                            <h3 class="card-title h5 fw-bold">Azeda y Azedinha</h3>
+                                            <p class="card-text text-muted">Pequeñas playas de aguas tranquilas y paisajes paradisíacos.</p>
+                                            <button class="btn btn-outline-primary w-100 mt-3">Ver Detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card h-100">
+                                        <img src="img/ferradura.jpg" class="card-img-top" alt="Playa Ferradura" style="height: 200px; object-fit: cover;">
+                                        <div class="card-body bg-light">
+                                            <h3 class="card-title h5 fw-bold">Playa Ferradura</h3>
+                                            <p class="card-text text-muted">Ideal para familias, con aguas tranquilas y deportes acuáticos.</p>
+                                            <button class="btn btn-outline-primary w-100 mt-3">Ver Detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card h-100">
+                                        <img src="img/brava.jpg" class="card-img-top" alt="Playa Brava" style="height: 200px; object-fit: cover;">
+                                        <div class="card-body bg-light">
+                                            <h3 class="card-title h5 fw-bold">Playa Brava</h3>
+                                            <p class="card-text text-muted">Playa con olas fuertes, perfecta para surf y vistas impresionantes.</p>
+                                            <button class="btn btn-outline-primary w-100 mt-3">Ver Detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Controles de navegación -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#destinationsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#destinationsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+        
+                <div class="text-center mt-5">
+                    <button class="btn btn-primary btn-lg">Ver Todos los Destinos</button>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Our Services -->
+        <section id="services" class="py-5 py-md-7 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold mb-3" data-i18n="services.title">Nuestros Servicios</h2>
+                    <p class="text-muted mx-auto" style="max-width: 700px;" data-i18n="services.subtitle">Ofrecemos experiencias completas para que disfrutes al máximo tu estancia en Buzios</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center p-4">
+                            <div class="service-icon mx-auto mb-4">
+                                <i class="fas fa-ship"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3" data-i18n="services.service1.name">Paseos en Barco</h3>
+                            <p class="text-muted" data-i18n="services.service1.description">Recorre las 12 playas más hermosas de Buzios en un paseo marítimo inolvidable.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center p-4">
+                            <div class="service-icon mx-auto mb-4">
+                                <i class="fas fa-hotel"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3" data-i18n="services.service2.name">Alojamiento</h3>
+                            <p class="text-muted" data-i18n="services.service2.description">Hoteles y posadas seleccionadas con las mejores ubicaciones y servicios.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center p-4">
+                            <div class="service-icon mx-auto mb-4">
+                                <i class="fas fa-compass"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3" data-i18n="services.service3.name">Tours Guiados</h3>
+                            <p class="text-muted" data-i18n="services.service3.description">Conoce la historia y los secretos de Buzios con nuestros guías expertos.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center p-4">
+                            <div class="service-icon mx-auto mb-4">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3" data-i18n="services.service4.name">Gastronomía</h3>
+                            <p class="text-muted" data-i18n="services.service4.description">Descubre los mejores restaurantes y la deliciosa cocina local.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="py-5 py-md-7">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <img src="mapa.png" alt="Nuestro equipo" class="img-fluid rounded-4">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold mb-4" data-i18n="about.title">Sobre Buzios Turismo</h2>
+                        <p class="text-muted mb-4" data-i18n="about.paragraph1">Con más de 15 años de experiencia, somos la agencia de turismo líder en Buzios. Nuestro compromiso es ofrecer experiencias auténticas y memorables a cada visitante.</p>
+                        <p class="text-muted mb-4" data-i18n="about.paragraph2">Nuestro equipo de expertos locales conoce cada rincón de Buzios y está dedicado a personalizar cada viaje según tus preferencias y necesidades.</p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="stat-circle me-3">15+</div>
+                                    <span data-i18n="about.stat1">Años de experiencia</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="stat-circle me-3">5K+</div>
+                                    <span data-i18n="about.stat2">Clientes satisfechos</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="stat-circle me-3">20+</div>
+                                    <span data-i18n="about.stat3">Tours exclusivos</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="stat-circle me-3">12</div>
+                                    <span data-i18n="about.stat4">Playas exploradas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--button class="btn btn-primary" data-i18n="about.cta">Conoce Nuestro Equipo</button-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+<section id="testimonials" class="py-5 py-md-7 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3" data-i18n="testimonials.title">Lo Que Dicen Nuestros Clientes</h2>
+            <p class="text-muted mx-auto" style="max-width: 700px;" data-i18n="testimonials.subtitle">Experiencias reales de viajeros que han disfrutado de nuestros servicios</p>
+        </div>
+
+        <!-- Contenedor de testimonios -->
+        <div id="testimonialsContainer">
+            <!-- Desktop Layout -->
+            <div class="row g-4 d-none d-md-flex">
+                <div class="col-md-4">
+                    <div class="card h-100 p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://placehold.co/100x100" alt="María González" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <h4 class="h6 fw-bold mb-0" data-i18n="testimonials.person1.name">María González</h4>
+                                <p class="text-muted small mb-0" data-i18n="testimonials.person1.country">Argentina</p>
+                            </div>
+                        </div>
+                        <p class="fst-italic mb-3" data-i18n="testimonials.person1.text">"La experiencia con Buzios Turismo fue increíble. El paseo en barco fue lo más destacado del viaje. ¡Volveremos seguro!"</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://placehold.co/100x100" alt="Juan Pérez" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <h4 class="h6 fw-bold mb-0" data-i18n="testimonials.person2.name">Juan Pérez</h4>
+                                <p class="text-muted small mb-0" data-i18n="testimonials.person2.country">México</p>
+                            </div>
+                        </div>
+                        <p class="fst-italic mb-3" data-i18n="testimonials.person2.text">"Los guías conocen cada rincón de Buzios y nos mostraron lugares que nunca hubiéramos encontrado por nuestra cuenta."</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://placehold.co/100x100" alt="Carlos López" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <h4 class="h6 fw-bold mb-0" data-i18n="testimonials.person3.name">Carlos López</h4>
+                                <p class="text-muted small mb-0" data-i18n="testimonials.person3.country">España</p>
+                            </div>
+                        </div>
+                        <p class="fst-italic mb-3" data-i18n="testimonials.person3.text">"El hotel recomendado por la agencia tenía una ubicación perfecta y el servicio fue excelente. Totalmente recomendado."</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Carousel -->
+            <div id="testimonialsCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://placehold.co/100x100" alt="María González" class="rounded-circle me-3" width="60" height="60">
+                                <div>
+                                    <h4 class="h6 fw-bold mb-0">María González</h4>
+                                    <p class="text-muted small mb-0">Argentina</p>
+                                </div>
+                            </div>
+                            <p class="fst-italic mb-3" data-i18n="testimonials.person1.text">"La experiencia con Buzios Turismo fue increíble. El paseo en barco fue lo más destacado del viaje. ¡Volveremos seguro!"</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://placehold.co/100x100" alt="Juan Pérez" class="rounded-circle me-3" width="60" height="60">
+                                <div>
+                                    <h4 class="h6 fw-bold mb-0">Juan Pérez</h4>
+                                    <p class="text-muted small mb-0">México</p>
+                                </div>
+                            </div>
+                            <p class="fst-italic mb-3" data-i18n="testimonials.person2.text">"Los guías conocen cada rincón de Buzios y nos mostraron lugares únicos."</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://placehold.co/100x100" alt="Carlos López" class="rounded-circle me-3" width="60" height="60">
+                                <div>
+                                    <h4 class="h6 fw-bold mb-0">Carlos López</h4>
+                                    <p class="text-muted small mb-0">España</p>
+                                </div>
+                            </div>
+                            <p class="fst-italic mb-3" data-i18n="testimonials.person3.text">"El hotel recomendado tenía una ubicación perfecta y el servicio fue excelente."</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Call to Action -->
+        <section class="py-5 py-md-7 bg-white text-center">
+            <div class="container">
+                <h2 class="fw-bold mb-3" data-i18n="cta.title">¿Listo para Vivir la Experiencia Buzios?</h2>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-5 py-md-7 bg-light">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-5">
+                        <h2 class="fw-bold mb-4" data-i18n="contact.title">Contáctanos</h2>
+                        <p class="text-muted mb-5" data-i18n="contact.subtitle">Estamos aquí para ayudarte a planificar tu viaje perfecto a Buzios. Contáctanos y un asesor se pondrá en contacto contigo.</p>
+                        <div class="mb-4">
+                            <div class="d-flex mb-4">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 fw-bold mb-1" data-i18n="contact.address.title">Dirección</h4>
+                                    <p class="text-muted" data-i18n="contact.address.value">Rua das Pedras, 123, Centro, Buzios, RJ, Brasil</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 fw-bold mb-1" data-i18n="contact.email.title">Email</h4>
+                                    <p class="text-muted">info@buziosturismo.com</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="contact-icon me-3">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 fw-bold mb-1" data-i18n="contact.phone.title">Teléfono</h4>
+                                    <p class="text-muted">+55 22 1234-5678</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="h6 fw-bold mb-3" data-i18n="contact.follow">Síguenos</h4>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="card shadow-sm">
+                            <div class="card-body p-4 p-md-5">
+                                <h3 class="h4 fw-bold mb-4" data-i18n="contact.form.title">Envíanos un Mensaje</h3>
+                                <form id="contactForm">
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label" data-i18n="contact.form.name">Nombre</label>
+                                            <input type="text" class="form-control" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Tu nombre" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" data-i18n="contact.form.email">Email</label>
+                                            <input type="email" class="form-control" data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="tu@email.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" data-i18n="contact.form.subject">Asunto</label>
+                                        <input type="text" class="form-control" data-i18n-placeholder="contact.form.subjectPlaceholder" placeholder="Asunto de tu mensaje" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" data-i18n="contact.form.message">Mensaje</label>
+                                        <textarea class="form-control" rows="5" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100" data-i18n="contact.form.submit">Enviar Mensaje</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-primary">
+        <div class="container">
+            <div class="row g-4 justify-content-center text-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <span class="fw-bold fs-5" data-i18n="brand">Buzios Turismo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
+

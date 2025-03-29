@@ -1,0 +1,140 @@
+/* Estilos personalizados mínimos para complementar Bootstrap */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 520px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ajuste para el buscador */
+.search-box {
+  z-index: 10;
+}
+
+/* Tarjetas de destino */
+.destination-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Iconos de servicios */
+.service-icon {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(14, 165, 233, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #0ea5e9;
+}
+
+/* Estadísticas */
+.stat-circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(14, 165, 233, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #0ea5e9;
+}
+
+/* Iconos de contacto */
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(14, 165, 233, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0ea5e9;
+}
+
+/* Iconos sociales */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(14, 165, 233, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0ea5e9;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: rgba(14, 165, 233, 0.2);
+}
+
+/* Espaciado personalizado para secciones */
+.py-md-7 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Bordes redondeados */
+.rounded-4 {
+  border-radius: 0.75rem;
+}
+
+/* Selector de idioma */
+.language-selector .dropdown-item {
+  display: flex;
+  align-items: center;
+}
+
+.language-selector .flag {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 767.98px) {
+  .search-box {
+    margin-top: 0;
+  }
+}
