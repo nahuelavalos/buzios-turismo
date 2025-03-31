@@ -45,6 +45,18 @@ const translations = {
         name: "Rua das Pedras",
         description: "La calle principal con tiendas, restaurantes y vida nocturna.",
       },
+      place4: {
+        name: "Azeda y Azedinha",
+        description: "Pequeñas playas de aguas tranquilas y paisajes paradisíacos.",
+      },
+      place5: {
+        name: "Playa Ferradura",
+        description: "Ideal para familias, con aguas tranquilas y deportes acuáticos.",
+      },
+      place6: {
+        name: "Playa Brava",
+        description: "Playa con olas fuertes, perfecta para surf y vistas impresionantes.",
+      },
     },
     // Servicios
     services: {
@@ -194,6 +206,18 @@ const translations = {
         name: "Rua das Pedras",
         description: "A rua principal com lojas, restaurantes e vida noturna.",
       },
+      place4: {
+        name: "Azeda e Azedinha",
+        description: "Pequenas praias com águas calmas e paisagens paradisíacas.",
+      },
+      place5: {
+        name: "Praia da Ferradura",
+        description: "Ideal para famílias, com águas calmas e esportes aquáticos.",
+      },
+      place6: {
+        name: "Praia Brava",
+        description: "Praia com ondas fortes, perfeita para o surfe e com vistas deslumbrantes.",
+      },
     },
     // Serviços
     services: {
@@ -237,6 +261,16 @@ const translations = {
         name: "Maria González",
         country: "Argentina",
         text: '"Nossa experiência com Búzios Turismo foi incrível. O passeio de barco foi o destaque da viagem. Voltaremos com certeza!"',
+      },
+      person2: {
+        name: "João Silva",
+        country: "Brasil",
+        text: '"Os guias conhecem cada canto de Búzios e nos mostraram lugares que nunca teríamos encontrado por conta própria."',
+      },
+      person3: {
+        name: "Laura Martínez",
+        country: "Chile",
+        text: '"O hotel recomendado pela agência tinha uma localização perfeita e o serviço foi excelente. Totalmente recomendado."',
       },
     },
     // Call to action
@@ -333,6 +367,18 @@ const translations = {
         name: "Rua das Pedras",
         description: "The main street with shops, restaurants, and nightlife.",
       },
+      place4: {
+        name: "Azeda and Azedinha",
+        description: "Small beaches with calm waters and paradisiacal scenery.",
+      },
+      place5: {
+        name: "Ferradura Beach",
+        description: "Ideal for families, with calm waters and water sports.",
+      },
+      place6: {
+        name: "Brava Beach",
+        description: "Beach with strong waves, perfect for surfing and breathtaking views.",
+      },
     },
     // Services
     services: {
@@ -376,6 +422,16 @@ const translations = {
         name: "Maria Gonzalez",
         country: "Argentina",
         text: '"Our experience with Buzios Tourism was incredible. The boat tour was the highlight of the trip. We will definitely be back!"',
+      },
+      person2: {
+        name: "João Silva",
+        country: "Brazil",
+        text: '"The guides know every corner of Buzios and showed us places we would never have found on our own."',
+      },
+      person3: {
+        name: "Laura Martínez",
+        country: "Chile",
+        text: '"The hotel recommended by the agency had a perfect location and the service was excellent. Totally recommended."',
       },
     },
     // Call to action
